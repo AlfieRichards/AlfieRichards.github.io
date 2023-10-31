@@ -18,22 +18,51 @@ body {
     margin-bottom: 10px;
     position: absolute;
     top: 50px;
+    height: 80vh; /* Set the desired height as a percentage of the viewport height */
+    max-height: 80vh; /* Set a maximum height to prevent the div from exceeding 70% of the viewport height */
+    width: 80vw; /* Set the desired width as a percentage of the viewport width */
+    max-width: 80vw; /* Set a maximum width to prevent the div from exceeding 90% of the viewport width */
+    overflow: auto; /* Add a scrollbar when content overflows */
+    padding: 10px; /* Add padding to the content inside the div */
+    color: rgb(255, 255, 255);
 }
 
 #input-line {
-    display: flex;
     position: absolute;
     bottom: 30px;
     user-select: none;
+    display: inline-block; /* Display the input as an inline-block element */
 }
 
 input {
     background-color: black;
     color: green;
     border: none;
-    width: 90%;
+    width: calc(100% - 200px); /* Adjust the width of the input to fit the remaining space, subtracting the width of the prefix */
 }
 
 span {
     color: green;
+}
+
+.green-text {
+    color: rgb(124, 255, 124);
+}
+
+.white-text {
+    color: white;
+    font-family: monospace;
+}
+
+.blue-text {
+    color: rgb(40, 155, 255);
+}
+.pink-profile-text {
+    color: #ffaad0; /* Pink color */
+}
+.blue-profile-text {
+    color: rgb(141, 202, 255);
+}
+.white-profile-text{
+    color: white;
 }
