@@ -1,0 +1,39 @@
+body {
+    font-family: monospace;
+    background-color: black;
+    color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#terminal {
+    width: 80%;
+    padding: 10px;
+}
+
+#output {
+    margin-bottom: 10px;
+    position: absolute;
+    top: 50px;
+}
+
+#input-line {
+    display: flex;
+    position: absolute;
+    bottom: 30px;
+    user-select: none;
+}
+
+input {
+    background-color: black;
+    color: green;
+    border: none;
+    width: 90%;
+}
+
+span {
+    color: green;
+}
