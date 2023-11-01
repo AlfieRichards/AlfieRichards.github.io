@@ -1,14 +1,21 @@
+function commandHyperlink(command) {
+    var inputField = document.getElementById('commandLine');
+    inputField.value = command;
+    // This line triggers the command to be executed after setting the value
+    handleKeyDown({ key: 'Enter' });
+  }
+
 function handleKeyDown(event) {
     if (event.key === 'Enter') {
         const input = document.getElementById('commandLine');
         const command = input.value;
         const outputDiv = document.getElementById('output');
-
-        outputDiv.innerHTML += '<span class="green-text">me@alfieSite</span><span class="white-text">:</span><span class="blue-text">/home/usr/me</span><span class="white-text">$ </span><span class="white-text">' + command + '</span>';
         
         if (command === 'help') {
-            outputDiv.innerHTML += '<p>Available commands: cv, profile, about, socials</p>';
+            outputDiv.innerHTML += '<p><span class="green-text">me@alfieSite</span><span class="white-text">:</span><span class="blue-text">/home/usr/me</span><span class="white-text">$ </span>' + command + '</p>';
+            outputDiv.innerHTML += 'Available commands: <a href="#" class="blue-text" onclick="commandHyperlink(\'cv\')">cv</a>, <a href="#" class="blue-text" onclick="commandHyperlink(\'profile\')">profile</a>, <a href="#" class="blue-text" onclick="commandHyperlink(\'about\')">about</a>, <a href="#" class="blue-text" onclick="commandHyperlink(\'socials\')">socials</a>, <a href="#" class="blue-text" onclick="commandHyperlink(\'help\')">help</a>';
         } else if (command === 'cv') {
+            outputDiv.innerHTML += '<p><span class="green-text">me@alfieSite</span><span class="white-text">:</span><span class="blue-text">/home/usr/me</span><span class="white-text">$ </span>' + command + '</p>';
             outputDiv.innerHTML += '<p class="pink-cv-text" style="font-size: 18px; text-transform: uppercase;">Personal Statement</p>';
             outputDiv.innerHTML += '<p class="blue-cv-text">An enthusiastic Games Development student, looking for part-time employment. Proven<br>experience in practical, communicative, and administration skills. A reliable and collaborative team<br>member, looking for work within a games studio or programming setting.</p><br>';
             
@@ -42,6 +49,7 @@ function handleKeyDown(event) {
             outputDiv.innerHTML += '<p class="blue-cv-text">References are available upon request</p><br>';
             
         } else if (command === 'profile') {
+            outputDiv.innerHTML += '<p><span class="green-text">me@alfieSite</span><span class="white-text">:</span><span class="blue-text">/home/usr/me</span><span class="white-text">$ </span>' + command + '</p>';
             outputDiv.innerHTML += '<p class="pink-profile-text">╭─── alfie@alfiedev.co.uk ──────────╮</p>';
             outputDiv.innerHTML += '<p class="blue-profile-text">| <span class="white-profile-text">Name</span> - <span class="white-profile-text">Alfie Richards</span></p>';
             outputDiv.innerHTML += '<p class="blue-profile-text">| <span class="white-profile-text">Pronouns</span> - <span class="white-profile-text">He/Him</span></p>';
@@ -50,6 +58,7 @@ function handleKeyDown(event) {
             outputDiv.innerHTML += '<p class="pink-profile-text">╰───────────────────────────────────╯</p>';
             
         } else if (command === 'socials') {
+            outputDiv.innerHTML += '<p><span class="green-text">me@alfieSite</span><span class="white-text">:</span><span class="blue-text">/home/usr/me</span><span class="white-text">$ </span>' + command + '</p>';
             outputDiv.innerHTML += '<p class="pink-profile-text">╭─── Socials ───────────────────────────────────────────╮</p>';
             outputDiv.innerHTML += '<p class="blue-profile-text">| <span class="white-profile-text">LinkedIn</span> - <a href="https://www.linkedin.com/in/alfie-richards" class="white-profile-text">https://www.linkedin.com/in/alfie-richards</a></p>';
             outputDiv.innerHTML += '<p class="blue-profile-text">| <span class="white-profile-text">X (Twitter)</span> - <a href="https://twitter.com/AlfieDev11" class="white-profile-text">https://twitter.com/AlfieDev11</a></p>';
@@ -59,6 +68,7 @@ function handleKeyDown(event) {
             
 
         } else {
+            outputDiv.innerHTML += '<p><span class="green-text">me@alfieSite</span><span class="white-text">:</span><span class="blue-text">/home/usr/me</span><span class="white-text">$ </span>' + command + '</p>';
             outputDiv.innerHTML += '<p>Command not found. Type "help" for available commands.</p>';
         }
 
