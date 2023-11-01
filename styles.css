@@ -46,6 +46,16 @@ span {
     color: green;
 }
 
+.user-input{
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    border-style: none;
+    background-color: transparent;
+    color: white;
+    font-family: monospace;
+    width: calc(100% - 200px);
+}
+
 .green-text {
     color: rgb(124, 255, 124);
 }
